@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 500px;
+      height: 90px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-toggle:checked ~ .menu {
+      display: flex;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s;
+    }
+
+    .menu a:hover {
+      border-bottom-color: #fff;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .skills-list {
+      display: none;
+    }
+
+    .skills-toggle {
+      margin-bottom: 20px;
+    }
+
+    #contact {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    #contact p {
+      margin-bottom: 20px;
+    }
+
+    #contact .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    #contact .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    #contact .form-group input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #contact .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #contact .form-group button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #contact .form-group button:hover {
+      background-color: #555;
+    }
+  </style>
+  <script>
+    function toggleSkills() {
+      var skillsList = document.querySelector('.skills-list');
+      var skillsToggle = document.querySelector('.skills-toggle');
+
+      if (skillsList.style.display === 'none') {
+        skillsList.style.display = 'block';
+        skillsToggle.textContent = 'Hide Skills';
+      } else {
+        skillsList.style.display = 'none';
+        skillsToggle.textContent = 'Show Skills';
+      }
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      // Code to handle form submission goes here
+      // You can use JavaScript to process form data or send it to a server
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <h1>Koppula Bindu Sri</h1>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle">&#9776;</label>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <button class="skills-toggle" onclick="toggleSkills()">Show Skills</button>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Typescript</li>
+      <li>Twitter bootstrap</li>
+      <li>Angular</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Ability to create innovative, creative, & interactive web designs to boost customer engagement. Sound knowledge in HTML, JavaScript, CSS, & other languages. Build reusable code for future use while optimising web performance.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Info</h2>
+        <p>Email: example@example.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p><a href="resume.pdf">Download Resume</a></p>
+  </section>
+</body>
+</html>
